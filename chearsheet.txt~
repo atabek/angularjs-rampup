@@ -1,0 +1,19 @@
+ng-app - attache the Application Module package
+<html ng-app="store">
+
+ng-controller - attach a Controller to the page
+<body ng-controller="StoreController as store">
+
+ng-show/ng-hide - display a section based on an Expression
+<h1 ng-show/ng-hide="name">Hello, {{name}}</h1>
+
+ng-repeat - repeat a section for each item in an Array
+<li ng-repeat="product in store.products">{{product.name}}</li>
+
+Formatting with Filters:
+Our recipe: {{data* | filter:options*}}
+
+date: {{'1232343049503495' | date: 'MM/dd/yyyy @ h:mma'}}
+uppercase, lowercase: {{'My description' | uppercase}}
+limitTo: {{'My description' | limitTo:8}}, <li ng-repeat="product in store.products | limitTo:3">
+orderBy: <li ng-repeat="product in store.products | orderBy:'-price'">
